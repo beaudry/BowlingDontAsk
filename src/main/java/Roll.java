@@ -1,6 +1,6 @@
-public class Roll {
-	public final int amountOfPinsKnocked;
-	public final boolean isStrike;
+class Roll {
+	private final int amountOfPinsKnocked;
+	private final boolean isStrike;
 	private final int amountOfPinsNeededForStrike = 10;
 
 	public Roll(int amountOfPinsKnocked) {

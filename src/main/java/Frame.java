@@ -1,18 +1,19 @@
 import java.util.LinkedList;
 
 public abstract class Frame {
-	final int pinsPerSet = 10;
-	LinkedList<Roll> rolls;
-	int pinsKnocked;
+	private final int pinsPerSet = 10;
+	private final LinkedList<Roll> rolls;
+	private int pinsKnocked;
 
-	public Frame() {
+	Frame() {
 		this.pinsKnocked = 0;
 		this.rolls = new LinkedList<Roll>();
 	}
 
 	void Roll(int amountOfPinsKnocked) throws KnockedMorePinsThanPossibleException {
 		preconditionsForRoll(amountOfPinsKnocked);
-		manageRoll();
+		pinsKnocked += amountOfPinsKnocked;
+		manageRoll(amountOfPinsKnocked);
 	}
 
 	private void preconditionsForRoll(int amountOfPinsKnocked) throws KnockedMorePinsThanPossibleException {
@@ -21,5 +22,5 @@ public abstract class Frame {
 		}
 	}
 
-	protected abstract void manageRoll();
+	protected abstract void manageRoll(int amountOfPinsKnocked);
 }

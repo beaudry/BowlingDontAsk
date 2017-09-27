@@ -1,3 +1,5 @@
-public class FrameRegular extends Frame {
+class FrameRegular extends Frame {
+	protected void manageRoll(int amountOfPinsKnocked) {
 
+	}
 }

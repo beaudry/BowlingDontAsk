@@ -1,2 +1,2 @@
-public class KnockedMorePinsThanPossibleException extends Exception {
+class KnockedMorePinsThanPossibleException extends Exception {
 }
